@@ -362,6 +362,10 @@ func (w *DefaultWriter) Flush() (err error) {
 	return nil
 }
 
+func (w *DefaultWriter) Bytes() []byte {
+	return w.buf
+}
+
 type fakeIOWriter struct {
 	bw *BytesWriter
 }
